@@ -385,28 +385,14 @@ namespace Cinema.func
             }*/
             
         }
+
+        private void DrawCinema(int numSeats)
+        {
+
+        }
         private void CreateCinemaView(string nameofRoom, string nameofFilm="")
         {
-            //numofSeat = Convert.ToInt32(dr[0]["Seats"]);
-            /*if (dr != null)
-            {
-                string id = dr[0]["Name"].ToString();
-                char code = id[id.Length - 1];
-
-                for (int seat = 0; seat <= numofSeat; seat++)
-                {
-                    listCinema1.Items.Add(code + seat.ToString(), 0);
-                }
-                listCinema1.LargeImageList = cinemaImg1;
-                //listCinema1.LargeImageList.Images[0] = cinemaImg1.Images[1];
-                listCinema1.View = View.LargeIcon;
-                //listCinema1.LargeImageList = cinemaImg1.Images[1];
-                //listCinema1.Items[1].ImageIndex = 1;
-            }
-            else
-            {
-
-            }*/
+            
             int[,] arr;
             if (nameofFilm != "")
             {

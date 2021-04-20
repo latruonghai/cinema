@@ -2,6 +2,7 @@
 namespace Cinema.func
 {
     partial class ListFilm
+
     {
         /// <summary>
         /// Required designer variable.

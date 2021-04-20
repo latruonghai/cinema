@@ -294,25 +294,7 @@ namespace Cinema.func
 
         private void ShowTimeComboBox1_TextChanged(object sender, EventArgs e)
         {
-            if (ShowTimeComboBox1.Text != "")
-            {
-                string showTime = ShowTimeComboBox1.Text;
-                int selectedIndex = ShowTimeComboBox1.SelectedIndex;
-                string cinemaName, filmName;
-                dr = Feature.getDataRow("Time", showTime, dtst);
-
-                DataRow[] d = Feature.getDataRow("Film", nameTextbox.Text, dr.CopyToDataTable());
-                cinemaName = d[selectedIndex]["Room"].ToString();
-                filmName = nameTextbox.Text + showTime;
-                //cinemaTextbox.Text = cinemaName;
-                //dr = getDataRow("Name", cinemaName, dtc);
-                CreateCinemaView(cinemaName, filmName);
-            }
-            else if (ShowTimeComboBox1.Text == "")
-            {
-                cinemaComboBox2.Text = "";
-                cinemaComboBox2.DataSource = new string[] { };
-            }
+            
         }
 
         private void nameTextbox_TextChanged(object sender, EventArgs e)
