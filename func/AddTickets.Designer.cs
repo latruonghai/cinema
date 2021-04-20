@@ -204,7 +204,7 @@ namespace Cinema.func
             // 
             // showtimeTextBox2
             // 
-            this.showtimeTextBox2.Location = new System.Drawing.Point(74, 111);
+            this.showtimeTextBox2.Location = new System.Drawing.Point(99, 111);
             this.showtimeTextBox2.Name = "showtimeTextBox2";
             this.showtimeTextBox2.Size = new System.Drawing.Size(111, 23);
             this.showtimeTextBox2.TabIndex = 18;
@@ -213,7 +213,7 @@ namespace Cinema.func
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(1, 117);
+            this.label4.Location = new System.Drawing.Point(7, 117);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 17;
@@ -221,7 +221,7 @@ namespace Cinema.func
             // 
             // filmTextBox1
             // 
-            this.filmTextBox1.Location = new System.Drawing.Point(245, 67);
+            this.filmTextBox1.Location = new System.Drawing.Point(296, 61);
             this.filmTextBox1.Name = "filmTextBox1";
             this.filmTextBox1.Size = new System.Drawing.Size(111, 23);
             this.filmTextBox1.TabIndex = 16;
@@ -230,7 +230,7 @@ namespace Cinema.func
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(173, 73);
+            this.label5.Location = new System.Drawing.Point(224, 67);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 17);
             this.label5.TabIndex = 15;
@@ -246,7 +246,7 @@ namespace Cinema.func
             // 
             // textBoxPay1
             // 
-            this.textBoxPay1.Location = new System.Drawing.Point(74, 161);
+            this.textBoxPay1.Location = new System.Drawing.Point(100, 162);
             this.textBoxPay1.Name = "textBoxPay1";
             this.textBoxPay1.ReadOnly = true;
             this.textBoxPay1.Size = new System.Drawing.Size(93, 23);
@@ -264,7 +264,7 @@ namespace Cinema.func
             // 
             // seatTextbox1
             // 
-            this.seatTextbox1.Location = new System.Drawing.Point(74, 67);
+            this.seatTextbox1.Location = new System.Drawing.Point(99, 67);
             this.seatTextbox1.Name = "seatTextbox1";
             this.seatTextbox1.ReadOnly = true;
             this.seatTextbox1.Size = new System.Drawing.Size(93, 23);
@@ -274,7 +274,7 @@ namespace Cinema.func
             // 
             this.labelMoney1.AutoSize = true;
             this.labelMoney1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelMoney1.Location = new System.Drawing.Point(0, 167);
+            this.labelMoney1.Location = new System.Drawing.Point(7, 168);
             this.labelMoney1.Name = "labelMoney1";
             this.labelMoney1.Size = new System.Drawing.Size(75, 17);
             this.labelMoney1.TabIndex = 12;
@@ -284,7 +284,7 @@ namespace Cinema.func
             // 
             this.seatLabel1.AutoSize = true;
             this.seatLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.seatLabel1.Location = new System.Drawing.Point(1, 68);
+            this.seatLabel1.Location = new System.Drawing.Point(7, 68);
             this.seatLabel1.Name = "seatLabel1";
             this.seatLabel1.Size = new System.Drawing.Size(64, 17);
             this.seatLabel1.TabIndex = 11;
@@ -292,14 +292,14 @@ namespace Cinema.func
             // 
             // cinemaTextbox
             // 
-            this.cinemaTextbox.Location = new System.Drawing.Point(245, 29);
+            this.cinemaTextbox.Location = new System.Drawing.Point(296, 23);
             this.cinemaTextbox.Name = "cinemaTextbox";
             this.cinemaTextbox.Size = new System.Drawing.Size(111, 23);
             this.cinemaTextbox.TabIndex = 8;
             // 
             // idTextBox
             // 
-            this.idTextBox.Location = new System.Drawing.Point(74, 22);
+            this.idTextBox.Location = new System.Drawing.Point(99, 22);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(93, 23);
             this.idTextBox.TabIndex = 5;
@@ -308,7 +308,7 @@ namespace Cinema.func
             // 
             this.nameCinema1.AutoSize = true;
             this.nameCinema1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.nameCinema1.Location = new System.Drawing.Point(208, 29);
+            this.nameCinema1.Location = new System.Drawing.Point(259, 23);
             this.nameCinema1.Name = "nameCinema1";
             this.nameCinema1.Size = new System.Drawing.Size(31, 17);
             this.nameCinema1.TabIndex = 3;
@@ -318,7 +318,7 @@ namespace Cinema.func
             // 
             this.idFilm1.AutoSize = true;
             this.idFilm1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.idFilm1.Location = new System.Drawing.Point(7, 23);
+            this.idFilm1.Location = new System.Drawing.Point(13, 23);
             this.idFilm1.Name = "idFilm1";
             this.idFilm1.Size = new System.Drawing.Size(22, 17);
             this.idFilm1.TabIndex = 0;
@@ -338,7 +338,7 @@ namespace Cinema.func
             // ShowTimeComboBox1
             // 
             this.ShowTimeComboBox1.FormattingEnabled = true;
-            this.ShowTimeComboBox1.Location = new System.Drawing.Point(45, 94);
+            this.ShowTimeComboBox1.Location = new System.Drawing.Point(73, 92);
             this.ShowTimeComboBox1.Name = "ShowTimeComboBox1";
             this.ShowTimeComboBox1.Size = new System.Drawing.Size(136, 23);
             this.ShowTimeComboBox1.TabIndex = 14;
@@ -357,7 +357,7 @@ namespace Cinema.func
             // 
             // nameTextbox
             // 
-            this.nameTextbox.Location = new System.Drawing.Point(69, 64);
+            this.nameTextbox.Location = new System.Drawing.Point(97, 62);
             this.nameTextbox.Name = "nameTextbox";
             this.nameTextbox.Size = new System.Drawing.Size(111, 23);
             this.nameTextbox.TabIndex = 6;
@@ -537,7 +537,7 @@ namespace Cinema.func
             // cinemaComboBox2
             // 
             this.cinemaComboBox2.FormattingEnabled = true;
-            this.cinemaComboBox2.Location = new System.Drawing.Point(70, 123);
+            this.cinemaComboBox2.Location = new System.Drawing.Point(98, 121);
             this.cinemaComboBox2.Name = "cinemaComboBox2";
             this.cinemaComboBox2.Size = new System.Drawing.Size(111, 23);
             this.cinemaComboBox2.TabIndex = 19;
