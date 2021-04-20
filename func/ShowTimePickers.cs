@@ -58,6 +58,38 @@ namespace Cinema.func
                 comboBoxRoom1.Items.Insert(i, Feature.getRoomName(alphabet[i]));
             }
         }
+        /*private DataRow[] getDataRow(string key1, string key2, string value1, string value2)
+        {
+            //string key = key1 + "='" + value1 + "' AND " + key2 + "='" + value2 + "'";
+            string k1, k2;
+            k1 = key1 + valu
+            DataRow[] dr = dtst.Select();
+            return dr;
+        }*/
+
+        private bool IsValidValue()
+        {
+            //DataRow[] dr = getDataRow("Time", "Film", showTimePicker1.Text, comboBoxFilm1.Text)
+            
+
+            if(dtst.Rows.Count ==0)
+            {
+                return true;
+            }
+            else
+            {
+                //DataTable dt = Feature.getDataRow("Time", showTimePicker1.Text, dtst).CopyToDataTable();
+                DataRow[] dr = dtst.AsEnumerable().Where(r => r.Field<string>("Film") == comboBoxFilm1.Text
+                                && r.Field<string>("Room") == comboBoxRoom1.Text).ToArray();
+                //string a = showTimePicker1.Text;
+                if (dr.Length == 0)
+                {
+                    return true;
+                }
+                //string c = dr[0]["Time"].ToString();
+                else return (dr[0]["Time"].ToString() == showTimePicker1.Value.ToString()) ? false : true;
+            }
+        }
         private DataRow CreateRowInDataShowTime(string stt, string time, string film, string room, bool ava)
         {
             DataRow row = dtst.NewRow();
@@ -74,23 +106,30 @@ namespace Cinema.func
         {
             DataRow row = CreateRowInDataShowTime(stt, time, film, room, ava);
             
-            dtst.Rows.Add(row);
+            dtst.Rows.Add(stt, time, film, room, ava);
 
             lst_dr.Add(row);
 
         }
         private void addShowTimeButton1_Click(object sender, EventArgs e)
         {
-            
-            string stt, time, film, room;
-            bool ava = true;
-            stt = stt_num.ToString();
-            film = comboBoxFilm1.Text;
-            room = comboBoxRoom1.Text;
-            time = showTimePicker1.Value.ToString();
-            addShowTime(stt, time, film, room, ava);
-            dataShowTimeGridView1.DataSource = dtst;
-            stt_num++;
+            if (IsValidValue())
+            {
+                string stt, time, film, room;
+                bool ava = true;
+                stt = stt_num.ToString();
+                film = comboBoxFilm1.Text;
+                room = comboBoxRoom1.Text;
+                time = showTimePicker1.Value.ToString();
+                addShowTime(stt, time, film, room, ava);
+                dataShowTimeGridView1.DataSource = dtst;
+                stt_num++;
+            }
+            else
+            {
+                MessageBox.Show("Nhập lại");
+                return;
+            }
 
         }
 

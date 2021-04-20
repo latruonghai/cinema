@@ -146,11 +146,11 @@ namespace Cinema.func
             else
             {
                 int i;
-                for (i = 0; i< exceptIndex; i++)
+                /*for (i = 0; i< exceptIndex; i++)
                 {
                     a[0,i] = 0;
                     a[1, i] = 60000;
-                }
+                }*/
                 for (i=exceptIndex; i < length; i++)
                 {
                     a[0,i] = exceptValue;
@@ -178,7 +178,17 @@ namespace Cinema.func
             SetDefaultValue(arr, num, exceptIndex, exceptValue);
             dic.Add(nameCinema, arr);
         }
-
+        /*private static DataRow[] getDataRow(DataTable dt, string key1, string key2, string value1, string value2) 
+        {
+            string key = key1 + "='" + value1 + "' AND " + key2 + "='" + value2 + "'";
+            DataRow[] dr = dt.Select(key);
+            return dr;
+        }
+        public static void CheckValidInformationAdded(DataTable dt, Tuple<string, string, string, string> tup)
+        {
+            DataRow[] dr = getDataRow(dt, tup.Item1, tup.Item2, tup.Item3, tup.Item4);
+            dr[]
+        }*/
         public static void AddFilmRoomDictionary(Dictionary< string, Dictionary<string, int[,]>> dic, Dictionary<string, int[,]> d, string nameFilm, List<string> nameCinema)
        
         {
@@ -190,8 +200,8 @@ namespace Cinema.func
                 int length = d[name].GetLength(1);
                 //d[name].CopyTo(de);
                 int[,] de = new int[2, length];
-                de = d[name];
-                //SetDefaultValue(de, length, (int)length * 4 / 5, 2);
+                //de = d[name];
+                SetDefaultValue(de, length, length -10, 2);
                 if (CheckExistsIn(dic, nameFilm))
                 {
                     dic[nameFilm].Add(name, de);

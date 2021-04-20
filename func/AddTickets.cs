@@ -346,6 +346,7 @@ namespace Cinema.func
         {
             ListFilm lstfilm = new ListFilm(dtf);
             lstfilm.Show();
+            dtf = lstfilm.dt;
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)

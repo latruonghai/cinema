@@ -107,7 +107,7 @@ namespace Cinema.func
             // 
             this.buttonPay1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonPay1.FlatAppearance.BorderSize = 10;
-            this.buttonPay1.Location = new System.Drawing.Point(188, 191);
+            this.buttonPay1.Location = new System.Drawing.Point(269, 188);
             this.buttonPay1.Name = "buttonPay1";
             this.buttonPay1.Size = new System.Drawing.Size(116, 34);
             this.buttonPay1.TabIndex = 5;
@@ -118,7 +118,7 @@ namespace Cinema.func
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Cinema.Properties.Resources.film04;
-            this.pictureBox1.Location = new System.Drawing.Point(176, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(269, 40);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 128);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -129,7 +129,7 @@ namespace Cinema.func
             // 
             this.filmView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.filmView1.FlatAppearance.BorderSize = 10;
-            this.filmView1.Location = new System.Drawing.Point(6, 175);
+            this.filmView1.Location = new System.Drawing.Point(39, 193);
             this.filmView1.Name = "filmView1";
             this.filmView1.Size = new System.Drawing.Size(116, 27);
             this.filmView1.TabIndex = 3;
@@ -141,7 +141,7 @@ namespace Cinema.func
             // 
             this.delFilm1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.delFilm1.FlatAppearance.BorderSize = 10;
-            this.delFilm1.Location = new System.Drawing.Point(6, 131);
+            this.delFilm1.Location = new System.Drawing.Point(39, 149);
             this.delFilm1.Name = "delFilm1";
             this.delFilm1.Size = new System.Drawing.Size(116, 26);
             this.delFilm1.TabIndex = 2;
@@ -153,7 +153,7 @@ namespace Cinema.func
             // 
             this.editFilm1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editFilm1.FlatAppearance.BorderSize = 10;
-            this.editFilm1.Location = new System.Drawing.Point(6, 74);
+            this.editFilm1.Location = new System.Drawing.Point(39, 92);
             this.editFilm1.Name = "editFilm1";
             this.editFilm1.Size = new System.Drawing.Size(116, 34);
             this.editFilm1.TabIndex = 1;
@@ -165,7 +165,7 @@ namespace Cinema.func
             // 
             this.addFilm1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addFilm1.FlatAppearance.BorderSize = 10;
-            this.addFilm1.Location = new System.Drawing.Point(6, 22);
+            this.addFilm1.Location = new System.Drawing.Point(39, 40);
             this.addFilm1.Name = "addFilm1";
             this.addFilm1.Size = new System.Drawing.Size(116, 34);
             this.addFilm1.TabIndex = 0;
@@ -403,6 +403,7 @@ namespace Cinema.func
             this.listFilm1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.listFilm1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.listFilm1.HideSelection = false;
             this.listFilm1.LargeImageList = this.cinemaImg1;
             this.listFilm1.Location = new System.Drawing.Point(451, 13);

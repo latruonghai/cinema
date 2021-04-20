@@ -231,7 +231,7 @@ namespace Cinema.func
                 Random ran = new Random();
                 int num = ran.Next(6, 10)*10;
                 //listRoom1.Items.Add("Rạp " + alpha[i], 0);
-                Feature.AddRoomDictionary(dic, nameCinema, num, num-10, 2);
+                Feature.AddRoomDictionary(dic, nameCinema, num, -1, -1);
                 dtc.Rows.Add("R" + i.ToString(), nameCinema, num, true);
             }
             //listRoom1.LargeImageList = roomImg1;

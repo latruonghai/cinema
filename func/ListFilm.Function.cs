@@ -15,8 +15,8 @@ namespace Cinema.func
         ListViewItem selectedItem;
         OpenFileDialog of;
         //string pathFile;
-        DataTable dt;
-        DataRow row;
+        public DataTable dt;
+        public DataRow[] row;
 
 /*        DataTable createFilmDT()
         {
