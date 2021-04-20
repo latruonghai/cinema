@@ -143,7 +143,10 @@ namespace Cinema.func
         {
             if (listFilm1.SelectedIndices.Count > 0)
             {
+
                 selectedItem = Feature.getItem(listFilm1);
+                ShowTimeComboBox1.Text = "";
+                cinemaComboBox2.Text = "";
                 nameTextbox.Text = selectedItem.Text;
                 /*DataRow[]*/ dr = Feature.getDataRow("Film", nameTextbox.Text, dtst);
                 /*try
@@ -160,6 +163,8 @@ namespace Cinema.func
                 if (ShowTimeComboBox1.Text == "")
                 {
                     listCinema1.Items.Clear();
+                    cinemaComboBox2.DataSource = new List<string> { };
+                    pictureBox2.Visible = false;
                 }
             }
             else
@@ -211,12 +216,12 @@ namespace Cinema.func
 
         private void listRoom1_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            if (listRoom1.SelectedIndices.Count > 0)
+           /* if (listRoom1.SelectedIndices.Count > 0)
             {
                 
                 ListViewItem item = Feature.getItem(listRoom1);
                 comboBox1.Text = item.Text;
-            }
+            }*/
         }
 
         private void ShowTimeComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -300,6 +305,8 @@ namespace Cinema.func
         private void nameTextbox_TextChanged(object sender, EventArgs e)
         {
             filmTextBox1.Text = nameTextbox.Text;
+            /*ShowTimeComboBox1.Text = "";
+            cinemaComboBox2.Text = "";*/
             if (cinemaComboBox2.Text != "" && nameTextbox.Text != "" && showtimeTextBox2.Text != "")
             {
                 filmTextBox1.Text = nameTextbox.Text;

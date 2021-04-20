@@ -62,7 +62,6 @@ namespace Cinema.func
             this.listCinema1 = new System.Windows.Forms.ListView();
             this.cinemaImg1 = new System.Windows.Forms.ImageList(this.components);
             this.listFilm1 = new System.Windows.Forms.ListView();
-            this.listRoom1 = new System.Windows.Forms.ListView();
             this.filmImg1 = new System.Windows.Forms.ImageList(this.components);
             this.roomImg1 = new System.Windows.Forms.ImageList(this.components);
             this.labelSeatAva2 = new System.Windows.Forms.Label();
@@ -76,12 +75,14 @@ namespace Cinema.func
             this.label3 = new System.Windows.Forms.Label();
             this.cinemaComboBox2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.funcBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.infoFilm1.SuspendLayout();
             this.groupBoxFilms1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // funcBox2
@@ -97,13 +98,14 @@ namespace Cinema.func
             this.funcBox2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.funcBox2.Location = new System.Drawing.Point(13, 13);
             this.funcBox2.Name = "funcBox2";
-            this.funcBox2.Size = new System.Drawing.Size(371, 243);
+            this.funcBox2.Size = new System.Drawing.Size(432, 243);
             this.funcBox2.TabIndex = 0;
             this.funcBox2.TabStop = false;
             this.funcBox2.Text = "Tác vụ";
             // 
             // buttonPay1
             // 
+            this.buttonPay1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonPay1.FlatAppearance.BorderSize = 10;
             this.buttonPay1.Location = new System.Drawing.Point(188, 191);
             this.buttonPay1.Name = "buttonPay1";
@@ -125,6 +127,7 @@ namespace Cinema.func
             // 
             // filmView1
             // 
+            this.filmView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.filmView1.FlatAppearance.BorderSize = 10;
             this.filmView1.Location = new System.Drawing.Point(6, 175);
             this.filmView1.Name = "filmView1";
@@ -136,6 +139,7 @@ namespace Cinema.func
             // 
             // delFilm1
             // 
+            this.delFilm1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.delFilm1.FlatAppearance.BorderSize = 10;
             this.delFilm1.Location = new System.Drawing.Point(6, 131);
             this.delFilm1.Name = "delFilm1";
@@ -147,6 +151,7 @@ namespace Cinema.func
             // 
             // editFilm1
             // 
+            this.editFilm1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editFilm1.FlatAppearance.BorderSize = 10;
             this.editFilm1.Location = new System.Drawing.Point(6, 74);
             this.editFilm1.Name = "editFilm1";
@@ -158,6 +163,7 @@ namespace Cinema.func
             // 
             // addFilm1
             // 
+            this.addFilm1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addFilm1.FlatAppearance.BorderSize = 10;
             this.addFilm1.Location = new System.Drawing.Point(6, 22);
             this.addFilm1.Name = "addFilm1";
@@ -191,7 +197,7 @@ namespace Cinema.func
             this.infoFilm1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.infoFilm1.Location = new System.Drawing.Point(12, 262);
             this.infoFilm1.Name = "infoFilm1";
-            this.infoFilm1.Size = new System.Drawing.Size(372, 245);
+            this.infoFilm1.Size = new System.Drawing.Size(433, 245);
             this.infoFilm1.TabIndex = 2;
             this.infoFilm1.TabStop = false;
             this.infoFilm1.Text = "Thông tin vé";
@@ -374,9 +380,9 @@ namespace Cinema.func
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listCinema1.HideSelection = false;
             this.listCinema1.LargeImageList = this.cinemaImg1;
-            this.listCinema1.Location = new System.Drawing.Point(390, 410);
+            this.listCinema1.Location = new System.Drawing.Point(451, 379);
             this.listCinema1.Name = "listCinema1";
-            this.listCinema1.Size = new System.Drawing.Size(609, 288);
+            this.listCinema1.Size = new System.Drawing.Size(459, 329);
             this.listCinema1.TabIndex = 1;
             this.listCinema1.UseCompatibleStateImageBehavior = false;
             this.listCinema1.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listCinema1_ItemSelectionChanged);
@@ -399,26 +405,13 @@ namespace Cinema.func
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listFilm1.HideSelection = false;
             this.listFilm1.LargeImageList = this.cinemaImg1;
-            this.listFilm1.Location = new System.Drawing.Point(390, 13);
+            this.listFilm1.Location = new System.Drawing.Point(451, 13);
             this.listFilm1.Name = "listFilm1";
-            this.listFilm1.Size = new System.Drawing.Size(320, 391);
+            this.listFilm1.Size = new System.Drawing.Size(459, 301);
             this.listFilm1.TabIndex = 3;
             this.listFilm1.UseCompatibleStateImageBehavior = false;
             this.listFilm1.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listFilm1_ItemSelectionChanged);
             this.listFilm1.DoubleClick += new System.EventHandler(this.listFilm1_DoubleClick);
-            // 
-            // listRoom1
-            // 
-            this.listRoom1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listRoom1.HideSelection = false;
-            this.listRoom1.LargeImageList = this.cinemaImg1;
-            this.listRoom1.Location = new System.Drawing.Point(716, 12);
-            this.listRoom1.Name = "listRoom1";
-            this.listRoom1.Size = new System.Drawing.Size(283, 392);
-            this.listRoom1.TabIndex = 4;
-            this.listRoom1.UseCompatibleStateImageBehavior = false;
-            this.listRoom1.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listRoom1_ItemSelectionChanged);
             // 
             // filmImg1
             // 
@@ -452,7 +445,7 @@ namespace Cinema.func
             this.groupBoxFilms1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBoxFilms1.Location = new System.Drawing.Point(12, 513);
             this.groupBoxFilms1.Name = "groupBoxFilms1";
-            this.groupBoxFilms1.Size = new System.Drawing.Size(180, 185);
+            this.groupBoxFilms1.Size = new System.Drawing.Size(202, 185);
             this.groupBoxFilms1.TabIndex = 6;
             this.groupBoxFilms1.TabStop = false;
             this.groupBoxFilms1.Text = "Danh mục phim";
@@ -491,6 +484,7 @@ namespace Cinema.func
             // 
             // buttonEditFilm2
             // 
+            this.buttonEditFilm2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonEditFilm2.FlatAppearance.BorderSize = 10;
             this.buttonEditFilm2.Location = new System.Drawing.Point(7, 22);
             this.buttonEditFilm2.Name = "buttonEditFilm2";
@@ -523,9 +517,9 @@ namespace Cinema.func
             this.groupBox1.Controls.Add(this.nameFilm1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(198, 513);
+            this.groupBox1.Location = new System.Drawing.Point(220, 513);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(186, 185);
+            this.groupBox1.Size = new System.Drawing.Size(225, 185);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh mục suất chiếu";
@@ -551,6 +545,7 @@ namespace Cinema.func
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 10;
             this.button1.Location = new System.Drawing.Point(6, 22);
             this.button1.Name = "button1";
@@ -560,16 +555,30 @@ namespace Cinema.func
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(451, 326);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(454, 47);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 18;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            // 
             // AddTickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(1003, 710);
+            this.ClientSize = new System.Drawing.Size(914, 710);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxFilms1);
             this.Controls.Add(this.labelSeatAva2);
-            this.Controls.Add(this.listRoom1);
             this.Controls.Add(this.listFilm1);
             this.Controls.Add(this.listCinema1);
             this.Controls.Add(this.infoFilm1);
@@ -577,6 +586,7 @@ namespace Cinema.func
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddTickets";
             this.Text = "Đặt Vé";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AddTickets_Load);
             this.funcBox2.ResumeLayout(false);
             this.funcBox2.PerformLayout();
@@ -588,6 +598,7 @@ namespace Cinema.func
             this.groupBoxFilms1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -614,7 +625,6 @@ namespace Cinema.func
         private System.Windows.Forms.ImageList cinemaImg1;
         private System.Windows.Forms.TextBox seatTextbox1;
         private System.Windows.Forms.Label seatLabel1;
-        private System.Windows.Forms.ListView listRoom1;
         private System.Windows.Forms.ListView listFilm1;
         private System.Windows.Forms.ImageList filmImg1;
         private System.Windows.Forms.ImageList roomImg1;
@@ -641,5 +651,6 @@ namespace Cinema.func
         private System.Windows.Forms.ComboBox typeComboBox3;
         private System.Windows.Forms.ComboBox cinemaComboBox2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

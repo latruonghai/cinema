@@ -188,8 +188,10 @@ namespace Cinema.func
             foreach (string name in nameCinema)
             {
                 int length = d[name].GetLength(1);
+                //d[name].CopyTo(de);
                 int[,] de = new int[2, length];
-                SetDefaultValue(de, length, (int)length * 4 / 5, 2);
+                de = d[name];
+                //SetDefaultValue(de, length, (int)length * 4 / 5, 2);
                 if (CheckExistsIn(dic, nameFilm))
                 {
                     dic[nameFilm].Add(name, de);

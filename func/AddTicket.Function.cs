@@ -230,12 +230,12 @@ namespace Cinema.func
                 string nameCinema = "Rạp " + alpha[i];
                 Random ran = new Random();
                 int num = ran.Next(6, 10)*10;
-                listRoom1.Items.Add("Rạp " + alpha[i], 0);
-                Feature.AddRoomDictionary(dic, nameCinema, num, 40, 2);
+                //listRoom1.Items.Add("Rạp " + alpha[i], 0);
+                Feature.AddRoomDictionary(dic, nameCinema, num, num-10, 2);
                 dtc.Rows.Add("R" + i.ToString(), nameCinema, num, true);
             }
-            listRoom1.LargeImageList = roomImg1;
-            listRoom1.View = View.LargeIcon;
+            //listRoom1.LargeImageList = roomImg1;
+            //listRoom1.View = View.LargeIcon;
 
         }
 
@@ -388,11 +388,11 @@ namespace Cinema.func
 
         private void DrawCinema(int numSeats)
         {
-
+            //listCinema1.Emp
         }
         private void CreateCinemaView(string nameofRoom, string nameofFilm="")
         {
-            
+            pictureBox2.Visible = true;
             int[,] arr;
             if (nameofFilm != "")
             {
