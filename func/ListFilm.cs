@@ -62,7 +62,7 @@ namespace Cinema.func
                                                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dlr == DialogResult.Yes)
             {
-                 
+                row = Feature.getDataRow("Name", imagePath1.Text, dt)[0];
                 EditDataFilmRow(row);
             }
             else return;
@@ -89,6 +89,13 @@ namespace Cinema.func
                 
                 EditDataFilmRow(row);
             }
+        }
+
+        private void statusCombobox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string status = statusCombobox1.Text;
+            DataRow[] drs = Feature.getDataRow("Status", status, dt);
+            Feature.ShowAllFilm(imageFilmList1, listFilm1, drs, delAll: true);
         }
     }
 }

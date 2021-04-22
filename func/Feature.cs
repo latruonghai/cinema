@@ -52,7 +52,7 @@ namespace Cinema.func
                     DataRow row = dt.NewRow();
                     string id;
                     id = "F" + dt.Rows.Count.ToString();
-                    Tuple<string, string, string, string> tup = new Tuple<string, string, string, string>(nameFilm, file, "Available", "");
+                    Tuple<string, string, string, string> tup = new Tuple<string, string, string, string>(nameFilm, file, "Đang chiếu", "");
 
                     AddRowDTFilm(dt, row, tup);
                 }
@@ -123,8 +123,12 @@ namespace Cinema.func
                 return;
             }
         }
-        public static void ShowAllFilm(ImageList imglst, ListView lstview1, DataRow[] dr, bool add = true, bool remove = false, List<int> rm_list= null)
+        public static void ShowAllFilm(ImageList imglst, ListView lstview1, DataRow[] dr, bool delAll = false, bool add = true, bool remove = false, List<int> rm_list= null)
         {
+            if (delAll)
+            {
+                lstview1.Items.Clear();
+            }
             if (add)
             {
                 for (int i = 0; i < dr.Length; i++)

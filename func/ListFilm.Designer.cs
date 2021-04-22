@@ -182,6 +182,7 @@ namespace Cinema.func
             this.statusCombobox1.Name = "statusCombobox1";
             this.statusCombobox1.Size = new System.Drawing.Size(114, 23);
             this.statusCombobox1.TabIndex = 24;
+            this.statusCombobox1.SelectedIndexChanged += new System.EventHandler(this.statusCombobox1_SelectedIndexChanged);
             // 
             // ListFilm
             // 
