@@ -283,6 +283,18 @@ namespace Cinema.func
             return dr;
         }
 
-
+        public static int CountElement(int[,] arr)
+        {
+            int length = arr.GetLength(1);
+            int seats = length;
+            for (int i = 0; i < length; i++)
+            {
+                if (arr[0, i] == 1)
+                {
+                    seats -= 1;
+                }
+            }
+            return seats;
+        }
     }
 }

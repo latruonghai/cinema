@@ -40,6 +40,7 @@ namespace Cinema.func
             this.addFilm1 = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.infoFilm1 = new System.Windows.Forms.GroupBox();
+            this.buttonList2 = new System.Windows.Forms.Button();
             this.showtimeTextBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.filmTextBox1 = new System.Windows.Forms.TextBox();
@@ -72,6 +73,7 @@ namespace Cinema.func
             this.buttonEditFilm2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxNumOfSeats1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cinemaComboBox2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -180,6 +182,7 @@ namespace Cinema.func
             // 
             // infoFilm1
             // 
+            this.infoFilm1.Controls.Add(this.buttonList2);
             this.infoFilm1.Controls.Add(this.showtimeTextBox2);
             this.infoFilm1.Controls.Add(this.label4);
             this.infoFilm1.Controls.Add(this.filmTextBox1);
@@ -201,6 +204,17 @@ namespace Cinema.func
             this.infoFilm1.TabIndex = 2;
             this.infoFilm1.TabStop = false;
             this.infoFilm1.Text = "Thông tin vé";
+            // 
+            // buttonList2
+            // 
+            this.buttonList2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonList2.FlatAppearance.BorderSize = 10;
+            this.buttonList2.Location = new System.Drawing.Point(306, 195);
+            this.buttonList2.Name = "buttonList2";
+            this.buttonList2.Size = new System.Drawing.Size(95, 34);
+            this.buttonList2.TabIndex = 19;
+            this.buttonList2.Text = "Thống kê";
+            this.buttonList2.UseVisualStyleBackColor = true;
             // 
             // showtimeTextBox2
             // 
@@ -510,6 +524,7 @@ namespace Cinema.func
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBoxNumOfSeats1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.cinemaComboBox2);
             this.groupBox1.Controls.Add(this.ShowTimeComboBox1);
@@ -525,6 +540,13 @@ namespace Cinema.func
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh mục suất chiếu";
+            // 
+            // textBoxNumOfSeats1
+            // 
+            this.textBoxNumOfSeats1.Location = new System.Drawing.Point(88, 155);
+            this.textBoxNumOfSeats1.Name = "textBoxNumOfSeats1";
+            this.textBoxNumOfSeats1.Size = new System.Drawing.Size(47, 23);
+            this.textBoxNumOfSeats1.TabIndex = 21;
             // 
             // label3
             // 
@@ -654,5 +676,7 @@ namespace Cinema.func
         private System.Windows.Forms.ComboBox cinemaComboBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox textBoxNumOfSeats1;
+        private System.Windows.Forms.Button buttonList2;
     }
 }

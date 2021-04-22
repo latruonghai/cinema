@@ -55,8 +55,8 @@ namespace Cinema.func
                 item.ImageIndex = 1;
                 //item.Text = idTextBox.Text;
                 //
-                seat -= 1;
-                labelSeatAva2.Text = seat.ToString() + " ghế";
+                seats -= 1;
+                textBoxNumOfSeats1.Text = seats.ToString();
 
                 getDisable(true);
                 
@@ -72,9 +72,9 @@ namespace Cinema.func
 
         private void AddTickets_Load(object sender, EventArgs e)
         {
-
+            //string b = String.Join("","10001".Split('0'));
             Feature.AutoLoadFilm(filmImg1, listFilm1, true, dtf);
-            /*showFilm(filmImg1, listFilm1);*/
+            //showFilm(filmImg1, listFilm1);
             showCinema(4);
             CreateCinemaDataRow(dr);
             //MessageBox.Show(filmImg1.Images.Count.ToString());
@@ -284,25 +284,7 @@ namespace Cinema.func
                              MessageBoxIcon.Information);
         }
 
-        /*private void cinemaTextbox_TextChanged(object sender, EventArgs e)
-        {
-            if (cinemaTextbox.Text != "" && nameTextbox.Text!="")
-            {
-                int[,] arr = dictionary[nameTextbox.Text][cinemaTextbox.Text];
-                int length = arr.GetLength(1);
-                seat = length;
-                for (int i = 0; i < length; i++)
-                {
-                    if (arr[0, i] == 1)
-                    {
-                        seat -= 1;
-                    }
-                }
-                labelSeatAva2.Text = seat.ToString() + " ghế";
-            }
-            else if(cinemaTextbox.Text =="") labelSeatAva2.Text = "";
-        }*/
-
+        
         private void ShowTimeComboBox1_TextChanged(object sender, EventArgs e)
         {
             
@@ -319,16 +301,8 @@ namespace Cinema.func
                 try
                 {
                     int[,] arr = dictionary[nameTextbox.Text + ShowTimeComboBox1.Text][cinemaComboBox2.Text];
-                    int length = arr.GetLength(1);
-                    seat = length;
-                    for (int i = 0; i < length; i++)
-                    {
-                        if (arr[0, i] == 1)
-                        {
-                            seat -= 1;
-                        }
-                    }
-                    labelSeatAva2.Text = seat.ToString() + " ghế";
+                    seats = Feature.CountElement(arr);
+                    textBoxNumOfSeats1.Text = seats.ToString();
                 }
 
 

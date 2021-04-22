@@ -15,7 +15,7 @@ namespace Cinema.func
     {
         DataSet dataset = new DataSet();
         DataTable dt, dtf, dtc, dtst;
-        int seat;
+        int seats;
         ListViewItem selectedItem;
         OpenFileDialog of;
         //DataGridViewRow row;
@@ -355,10 +355,7 @@ namespace Cinema.func
                 }
             }
         }*/
-        private void CheckFilmExists()
-        {
 
-        }
         private void ShowFilm()
         {
 
@@ -403,12 +400,14 @@ namespace Cinema.func
             if (nameofFilm != "")
             {
                 arr = dictionary[nameofFilm][nameofRoom];
+                
             }
             else
             {
                 arr = dic[nameofRoom];
             }
             int length = arr.GetLength(1);
+            
             int lenStr = nameofRoom.Length;
             char id = nameofRoom[lenStr - 1];
             if (listCinema1.Items.Count > 0)
@@ -420,6 +419,8 @@ namespace Cinema.func
 
                 listCinema1.Items.Add(id + seat.ToString(), arr[0, seat]);
             }
+            seats = Feature.CountElement(arr);
+            textBoxNumOfSeats1.Text = seats.ToString();
             
         }
 
