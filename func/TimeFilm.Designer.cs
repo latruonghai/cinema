@@ -53,7 +53,7 @@ namespace Cinema.func
             this.ClientSize = new System.Drawing.Size(568, 450);
             this.Controls.Add(this.dataGridView1);
             this.Name = "TimeFilm";
-            this.Text = "TimeFilm";
+            this.Text = "Thông tin chi tiết vé";
             this.Load += new System.EventHandler(this.TimeFilm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

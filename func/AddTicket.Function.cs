@@ -72,10 +72,6 @@ namespace Cinema.func
             dtf.Columns.Add("Status", typeof(string));
             dtf.Columns.Add("Direction", typeof(string));
             dtf.Columns.Add("Type", typeof(string));
-            //dtf.Columns.Add("Time", typeof(string));
-            //dtf.Columns.Add("Type", typeof(string));
-            //dtf.Columns.Add("Description", typeof(string));
-            //dtf.Columns.Add("ID Cinema", typeof(string));
 
             return dtf;
         }
@@ -98,12 +94,7 @@ namespace Cinema.func
             }
 
         }
-        /*DataRow[] getDataRow(string key, string value, DataTable dt)
-        {
-            string s = key + "='" + value + "'";
-            DataRow[] dr = dt.Select(s);
-            return dr;
-        }*/
+
         private void Filter()
         {
             string status = comboBox1.Text;

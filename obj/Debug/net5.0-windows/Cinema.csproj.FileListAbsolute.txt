@@ -5,7 +5,6 @@ E:\C#-Project\NamBa\Cinema\bin\Debug\net5.0-windows\Cinema.runtimeconfig.dev.jso
 E:\C#-Project\NamBa\Cinema\bin\Debug\net5.0-windows\Cinema.dll
 E:\C#-Project\NamBa\Cinema\bin\Debug\net5.0-windows\ref\Cinema.dll
 E:\C#-Project\NamBa\Cinema\bin\Debug\net5.0-windows\Cinema.pdb
-E:\C#-Project\NamBa\Cinema\obj\Debug\net5.0-windows\Cinema.csprojAssemblyReference.cache
 E:\C#-Project\NamBa\Cinema\obj\Debug\net5.0-windows\Cinema.MainWindow.resources
 E:\C#-Project\NamBa\Cinema\obj\Debug\net5.0-windows\Cinema.csproj.GenerateResource.cache
 E:\C#-Project\NamBa\Cinema\obj\Debug\net5.0-windows\Cinema.GeneratedMSBuildEditorConfig.editorconfig

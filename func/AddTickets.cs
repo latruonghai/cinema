@@ -214,8 +214,8 @@ namespace Cinema.func
 
         private void filmView1_Click(object sender, EventArgs e)
         {
-            ListFilm lf = new ListFilm(dtf);
-            lf.ShowDialog();
+            TimeFilm tf = new TimeFilm(dt);
+            tf.ShowDialog();
 
         }
 

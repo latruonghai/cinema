@@ -40,7 +40,6 @@ namespace Cinema.func
             this.addFilm1 = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.infoFilm1 = new System.Windows.Forms.GroupBox();
-            this.buttonList2 = new System.Windows.Forms.Button();
             this.showtimeTextBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.filmTextBox1 = new System.Windows.Forms.TextBox();
@@ -182,7 +181,6 @@ namespace Cinema.func
             // 
             // infoFilm1
             // 
-            this.infoFilm1.Controls.Add(this.buttonList2);
             this.infoFilm1.Controls.Add(this.showtimeTextBox2);
             this.infoFilm1.Controls.Add(this.label4);
             this.infoFilm1.Controls.Add(this.filmTextBox1);
@@ -204,18 +202,6 @@ namespace Cinema.func
             this.infoFilm1.TabIndex = 2;
             this.infoFilm1.TabStop = false;
             this.infoFilm1.Text = "Thông tin vé";
-            // 
-            // buttonList2
-            // 
-            this.buttonList2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonList2.FlatAppearance.BorderSize = 10;
-            this.buttonList2.Location = new System.Drawing.Point(306, 195);
-            this.buttonList2.Name = "buttonList2";
-            this.buttonList2.Size = new System.Drawing.Size(95, 34);
-            this.buttonList2.TabIndex = 19;
-            this.buttonList2.Text = "Thống kê";
-            this.buttonList2.UseVisualStyleBackColor = true;
-            this.buttonList2.Click += new System.EventHandler(this.buttonList2_Click);
             // 
             // showtimeTextBox2
             // 
@@ -390,8 +376,7 @@ namespace Cinema.func
             // 
             // listCinema1
             // 
-            this.listCinema1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.listCinema1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listCinema1.HideSelection = false;
             this.listCinema1.LargeImageList = this.cinemaImg1;
@@ -582,9 +567,7 @@ namespace Cinema.func
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(451, 326);
             this.pictureBox2.Name = "pictureBox2";
@@ -678,6 +661,5 @@ namespace Cinema.func
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox textBoxNumOfSeats1;
-        private System.Windows.Forms.Button buttonList2;
     }
 }
