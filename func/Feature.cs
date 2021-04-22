@@ -142,7 +142,7 @@ namespace Cinema.func
                 DeleteDataFilmRow(rm_list, lstview1);
             }
         }
-        private static void SetDefaultValue(int[,] a, int length, int exceptIndex = -1, int exceptValue = -1)
+        private static void SetDefaultValue(int[,] a, int length, int exceptIndex = -1, int exceptValue = -1, bool news = false)
         {
             if (exceptIndex == -1)
             {
@@ -158,11 +158,15 @@ namespace Cinema.func
             else
             {
                 int i;
-                /*for (i = 0; i< exceptIndex; i++)
-                {
-                    a[0,i] = 0;
-                    a[1, i] = 60000;
-                }*/
+                if (news) {
+                    
+                    for (i = 0; i< exceptIndex; i++)
+                    {
+                        a[0,i] = 0;
+                        a[1, i] = 60000;
+                    }
+                }
+                
                 for (i=exceptIndex; i < length; i++)
                 {
                     a[0,i] = exceptValue;
@@ -201,7 +205,7 @@ namespace Cinema.func
         public static void AddRoomDictionary(Dictionary<string, int[,]> dic, string nameCinema, int num, int exceptIndex, int exceptValue)
         {
             int[,] arr = new int[2, num];
-            SetDefaultValue(arr, num, exceptIndex, exceptValue);
+            SetDefaultValue(arr, num, exceptIndex, exceptValue, news:true);
             dic.Add(nameCinema, arr);
         }
         /*private static DataRow[] getDataRow(DataTable dt, string key1, string key2, string value1, string value2) 

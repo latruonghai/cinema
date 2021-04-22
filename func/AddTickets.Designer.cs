@@ -215,6 +215,7 @@ namespace Cinema.func
             this.buttonList2.TabIndex = 19;
             this.buttonList2.Text = "Thống kê";
             this.buttonList2.UseVisualStyleBackColor = true;
+            this.buttonList2.Click += new System.EventHandler(this.buttonList2_Click);
             // 
             // showtimeTextBox2
             // 

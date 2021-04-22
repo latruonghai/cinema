@@ -12,9 +12,21 @@ namespace Cinema.func
 {
     public partial class TimeFilm : Form
     {
-        public TimeFilm()
+        DataTable dtb = new DataTable();
+        public TimeFilm(DataTable dt)
         {
+            dtb = dt;
             InitializeComponent();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void TimeFilm_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = dtb;
         }
     }
 }

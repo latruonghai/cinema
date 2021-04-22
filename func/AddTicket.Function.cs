@@ -143,6 +143,7 @@ namespace Cinema.func
         {
             //idTextBox.Text = "";
             idTextBox.Text = "V" + numofTicket.ToString();
+            textBoxPay1.Text = dic[cinemaComboBox2.Text][1,selectedItem.Index].ToString();
             /*nameTextbox.Text = "";
             cinemaTextbox.Text = "";
             dateTimePicker1.Text = "";
@@ -214,6 +215,7 @@ namespace Cinema.func
             timebuyTextbox.Text = dr[0]["Buying Time"].ToString();
             seatTextbox1.Text = dr[0]["Seats"].ToString();
             textBoxPay1.Text = dr[0]["Price"].ToString() + " VND";
+            
         }
 /*        private void addRowDTFilm(DataRow row)
         {
@@ -237,7 +239,7 @@ namespace Cinema.func
                 Random ran = new Random();
                 int num = ran.Next(6, 10)*10;
                 //listRoom1.Items.Add("Rạp " + alpha[i], 0);
-                Feature.AddRoomDictionary(dic, nameCinema, num, -1, -1);
+                Feature.AddRoomDictionary(dic, nameCinema, num, num-10, 2);
                 dtc.Rows.Add("R" + i.ToString(), nameCinema, num, true);
             }
             //listRoom1.LargeImageList = roomImg1;

@@ -162,6 +162,7 @@ namespace Cinema.func
                 //Feature.GetComboBoxCollection(dr ,ShowTimeComboBox1, "Time");
                 dr = Feature.getDataRow("Name", nameTextbox.Text, dtf);
                 comboBox1.Text = dr[0]["Status"].ToString();
+                typeComboBox3.Text = dr[0]["Type"].ToString();
                 //Feature.GetComboBoxCollection(dr ,cinemaComboBox2, "Room");
                 //optionGroupBox1.Visible = true;
                 if (ShowTimeComboBox1.Text == "")
@@ -361,6 +362,12 @@ namespace Cinema.func
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             Filter();
+        }
+
+        private void buttonList2_Click(object sender, EventArgs e)
+        {
+            TimeFilm tf = new TimeFilm(dt);
+            tf.Show();
         }
     }
 }

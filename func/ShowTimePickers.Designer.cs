@@ -60,10 +60,10 @@ namespace Cinema.func
             // showTimeLabel1
             // 
             this.showTimeLabel1.AutoSize = true;
-            this.showTimeLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.showTimeLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.showTimeLabel1.Location = new System.Drawing.Point(22, 91);
             this.showTimeLabel1.Name = "showTimeLabel1";
-            this.showTimeLabel1.Size = new System.Drawing.Size(67, 17);
+            this.showTimeLabel1.Size = new System.Drawing.Size(65, 15);
             this.showTimeLabel1.TabIndex = 15;
             this.showTimeLabel1.Text = "Suất chiếu";
             // 
@@ -123,12 +123,12 @@ namespace Cinema.func
             // filmLabel1
             // 
             this.filmLabel1.AutoSize = true;
-            this.filmLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.filmLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.filmLabel1.Location = new System.Drawing.Point(22, 132);
             this.filmLabel1.Name = "filmLabel1";
-            this.filmLabel1.Size = new System.Drawing.Size(67, 17);
+            this.filmLabel1.Size = new System.Drawing.Size(58, 15);
             this.filmLabel1.TabIndex = 22;
-            this.filmLabel1.Text = "Suất chiếu";
+            this.filmLabel1.Text = "Tên phim";
             // 
             // comboBoxFilm1
             // 
@@ -149,10 +149,10 @@ namespace Cinema.func
             // labelRoom1
             // 
             this.labelRoom1.AutoSize = true;
-            this.labelRoom1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelRoom1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelRoom1.Location = new System.Drawing.Point(292, 132);
             this.labelRoom1.Name = "labelRoom1";
-            this.labelRoom1.Size = new System.Drawing.Size(31, 17);
+            this.labelRoom1.Size = new System.Drawing.Size(28, 15);
             this.labelRoom1.TabIndex = 24;
             this.labelRoom1.Text = "Rạp";
             // 
@@ -183,8 +183,9 @@ namespace Cinema.func
             this.Controls.Add(this.dataShowTimeGridView1);
             this.Controls.Add(this.showTimePicker1);
             this.Controls.Add(this.showTimeLabel1);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Name = "ShowTimePickers";
-            this.Text = "CinemaList";
+            this.Text = "Suất chiếu";
             this.Load += new System.EventHandler(this.ShowTimePickers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataShowTimeGridView1)).EndInit();
             this.ResumeLayout(false);
