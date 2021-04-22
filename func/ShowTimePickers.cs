@@ -14,16 +14,19 @@ namespace Cinema.func
     {
         private List<DataRow> lst_dr = new List<DataRow> { };
         //public List<DataRow> lst_dr1 = new List<DataRow> { };
+        //private DataRow[] dr;
         public DataRow[] dr;
+        private DataRow[] drs;
         public DataTable dtst = new DataTable();
         char[] alphabet = Feature.alpha;
         int stt_num = 1;
         public int numofSeat = 5;
         //public DataRow[] dr = new DataRow[] {};
-        public ShowTimePickers(DataTable dt)
+        public ShowTimePickers(DataTable dt, DataRow[] drq)
         {
             //dtst = createShowTimeDT();
             dtst = dt;
+            drs = drq;
             InitializeComponent();
         }
 
@@ -44,11 +47,12 @@ namespace Cinema.func
         private void addComboBoxInfomation()
         {
             
-            List<string> nameofFiles = Feature.GetNameOfFile();
-            for (int i=0;i<nameofFiles.Count;i++)
+           /* List<string> nameofFiles = Feature.GetNameOfFile();*/
+            for (int i=0;i<drs.Length;i++)
             {
-                comboBoxFilm1.Items.Insert(i, nameofFiles[i]);
+                comboBoxFilm1.Items.Insert(i, drs[i]["Name"]);
             }
+           
         }
 
         private void AddComboBoxRoomInformation(int numofRoom)

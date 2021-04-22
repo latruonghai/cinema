@@ -36,7 +36,7 @@ namespace Cinema.func
         private void browseFilmBtn1_Click_1(object sender, EventArgs e)
         {
             BrowseImage();
-            obj = GetObjectName(sender);
+            
         }
 
         private void buttonDelFilm1_Click(object sender, EventArgs e)

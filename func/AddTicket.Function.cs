@@ -371,7 +371,7 @@ namespace Cinema.func
         {
             
            
-            ShowTimePickers stp = new ShowTimePickers(dtst);
+            ShowTimePickers stp = new ShowTimePickers(dtst, dtf.Select());
 
             stp.ShowDialog();
              //if (stp.isSho)

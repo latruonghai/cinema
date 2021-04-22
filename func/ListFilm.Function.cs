@@ -11,29 +11,17 @@ namespace Cinema.func
     public partial class  ListFilm
     {
         //FolderBrowserDialog fd;
-        string obj;
+        //string obj;
+        public List<DataRow> lst = new List<DataRow> { };
+        public List<int> lst_rmv = new List<int> { };
         ListViewItem selectedItem;
         OpenFileDialog of;
         //string pathFile;
         public DataTable dt;
-        public DataRow[] row;
+        //public DataRow[] rows;
+        private DataRow row;
 
-/*        DataTable createFilmDT()
-        {
 
-            //DataTable dt = dataset.Tables.Add("Film");
-            dt.Columns.Add("ID", typeof(string));
-            dt.Columns.Add("Name", typeof(string));
-            dt.Columns.Add("Status", typeof(string));
-            dt.Columns.Add("Direction", typeof(string));
-            dt.Columns.Add("Type", typeof(string));
-            //dtf.Columns.Add("Time", typeof(string));
-            //dtf.Columns.Add("Type", typeof(string));
-            //dtf.Columns.Add("Description", typeof(string));
-            //dtf.Columns.Add("ID Cinema", typeof(string));
-
-            return dt;
-        }*/
         private void BrowseImage()
         {
             of = new OpenFileDialog();
@@ -57,9 +45,11 @@ namespace Cinema.func
                 status = "Đang chiếu";
                 type = typeTextBox1.Text;
                 film = Feature.LoadFilm(imageFilmList1, listFilm1, direction);
-
+                
                 Tuple<string, string, string, string> tup = new Tuple<string, string, string, string>(film, direction, status, type);
-                Feature.AddRowDTFilm(dt, dt.NewRow(), tup);
+                Feature.AddRowDTFilm(dt, dt.NewRow(), tup, lst);
+                //lst.Add()
+                
             }
         }
 
@@ -72,6 +62,7 @@ namespace Cinema.func
 
         private void DeleteDataFilmRow(DataRow row)
         {
+            lst_rmv.Add(selectedItem.Index);
             row.Delete();
             selectedItem.Remove();
         }

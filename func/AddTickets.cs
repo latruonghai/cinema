@@ -256,8 +256,10 @@ namespace Cinema.func
             if (dlr == DialogResult.Yes)
             {
                 dr[0].Delete();
-                dictionary[nameTextbox.Text + showtimeTextBox2.Text][cinemaTextbox.Text][0, order] = 0;
-                selectedItem.ImageIndex = 0;
+                int[,] arr = dictionary[nameTextbox.Text + showtimeTextBox2.Text][cinemaTextbox.Text];
+                int lenght = arr.GetLength(1);
+                arr[0, order] = (order < lenght-11)?0:2;
+                selectedItem.ImageIndex = arr[0,order];
                 numofTicket -= 1;
                 price -= addInformation(order);
             }
@@ -345,8 +347,11 @@ namespace Cinema.func
         private void buttonEditFilm2_Click(object sender, EventArgs e)
         {
             ListFilm lstfilm = new ListFilm(dtf);
-            lstfilm.Show();
+            lstfilm.ShowDialog();
             dtf = lstfilm.dt;
+            dr = lstfilm.lst.ToArray();
+            List<int> lst_rm = lstfilm.lst_rmv;
+            Feature.ShowAllFilm(filmImg1, listFilm1, dr, remove:true, rm_list:lst_rm);
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)

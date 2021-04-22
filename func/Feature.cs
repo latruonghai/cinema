@@ -123,11 +123,18 @@ namespace Cinema.func
                 return;
             }
         }
-        public static void ShowAllFilm(ImageList imglst, ListView lstview1, DataRow[] dr)
+        public static void ShowAllFilm(ImageList imglst, ListView lstview1, DataRow[] dr, bool add = true, bool remove = false, List<int> rm_list= null)
         {
-            for (int i = 0; i < dr.Length; i++)
+            if (add)
             {
-                ShowOneFilm(imglst, lstview1, dr[i]);
+                for (int i = 0; i < dr.Length; i++)
+                {
+                    ShowOneFilm(imglst, lstview1, dr[i]);
+                }
+            }
+            if (remove)
+            {
+                DeleteDataFilmRow(rm_list, lstview1);
             }
         }
         private static void SetDefaultValue(int[,] a, int length, int exceptIndex = -1, int exceptValue = -1)
@@ -160,6 +167,19 @@ namespace Cinema.func
         }
         public static void AddRowDTFilm(DataTable dtf, DataRow row, Tuple<string, string, string, string> c)
         {
+
+            string id = "M" + (dtf.Rows.Count + 1).ToString();
+            row["ID"] = id;
+            row["Name"] = c.Item1;
+            row["Direction"] = c.Item2;
+            row["Status"] = c.Item3;
+            row["Type"] = c.Item4;
+            dtf.Rows.Add(row);
+            DataRow[] dr = dtf.AsEnumerable().ToArray();
+            /*dtf.Rows.Add(id, namefilm, "");*/
+        }
+        public static void AddRowDTFilm(DataTable dtf, DataRow row, Tuple<string, string, string, string> c, List<DataRow> lst)
+        {
             
             string id = "M" + (dtf.Rows.Count + 1).ToString();
             row["ID"] = id;
@@ -168,6 +188,7 @@ namespace Cinema.func
             row["Status"] = c.Item3;
             row["Type"] = c.Item4;
             dtf.Rows.Add(row);
+            lst.Add(row);
             DataRow[] dr = dtf.AsEnumerable().ToArray();
             /*dtf.Rows.Add(id, namefilm, "");*/
         }
@@ -189,6 +210,16 @@ namespace Cinema.func
             DataRow[] dr = getDataRow(dt, tup.Item1, tup.Item2, tup.Item3, tup.Item4);
             dr[]
         }*/
+
+        private static void DeleteDataFilmRow(List<int> index, ListView lstview)
+        {
+            foreach (int i in index) 
+            {
+                //ListViewItem item = lstview.Items[i];
+                lstview.Items[i].Remove();
+            }
+                    
+        }
         public static void AddFilmRoomDictionary(Dictionary< string, Dictionary<string, int[,]>> dic, Dictionary<string, int[,]> d, string nameFilm, List<string> nameCinema)
        
         {
