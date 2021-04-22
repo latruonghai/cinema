@@ -44,6 +44,7 @@ namespace Cinema.func
             this.nameFilm1 = new System.Windows.Forms.Label();
             this.imagePath1 = new System.Windows.Forms.TextBox();
             this.statusCombobox1 = new System.Windows.Forms.ComboBox();
+            this.buttonFilter2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -113,6 +114,7 @@ namespace Cinema.func
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.buttonFilter2);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.typeTextBox1);
@@ -122,7 +124,7 @@ namespace Cinema.func
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.Location = new System.Drawing.Point(12, 220);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(256, 181);
+            this.groupBox2.Size = new System.Drawing.Size(256, 199);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin phim";
@@ -184,6 +186,17 @@ namespace Cinema.func
             this.statusCombobox1.TabIndex = 24;
             this.statusCombobox1.SelectedIndexChanged += new System.EventHandler(this.statusCombobox1_SelectedIndexChanged);
             // 
+            // buttonFilter2
+            // 
+            this.buttonFilter2.FlatAppearance.BorderSize = 10;
+            this.buttonFilter2.Location = new System.Drawing.Point(6, 163);
+            this.buttonFilter2.Name = "buttonFilter2";
+            this.buttonFilter2.Size = new System.Drawing.Size(95, 30);
+            this.buttonFilter2.TabIndex = 29;
+            this.buttonFilter2.Text = "Lọc";
+            this.buttonFilter2.UseVisualStyleBackColor = true;
+            this.buttonFilter2.Click += new System.EventHandler(this.buttonFilter2_Click);
+            // 
             // ListFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -216,5 +229,6 @@ namespace Cinema.func
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox typeTextBox1;
+        private System.Windows.Forms.Button buttonFilter2;
     }
 }

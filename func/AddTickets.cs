@@ -148,6 +148,7 @@ namespace Cinema.func
                 ShowTimeComboBox1.Text = "";
                 cinemaComboBox2.Text = "";
                 nameTextbox.Text = selectedItem.Text;
+
                 /*DataRow[]*/ dr = Feature.getDataRow("Film", nameTextbox.Text, dtst);
                 /*try
                 {
@@ -158,6 +159,9 @@ namespace Cinema.func
                     return;
                 }*/
                 Feature.GetComboBoxCollection(dr ,ShowTimeComboBox1, "Time");
+                //Feature.GetComboBoxCollection(dr ,ShowTimeComboBox1, "Time");
+                dr = Feature.getDataRow("Name", nameTextbox.Text, dtf);
+                comboBox1.Text = dr[0]["Status"].ToString();
                 //Feature.GetComboBoxCollection(dr ,cinemaComboBox2, "Room");
                 //optionGroupBox1.Visible = true;
                 if (ShowTimeComboBox1.Text == "")
@@ -349,9 +353,9 @@ namespace Cinema.func
             ListFilm lstfilm = new ListFilm(dtf);
             lstfilm.ShowDialog();
             dtf = lstfilm.dt;
-            dr = lstfilm.lst.ToArray();
-            List<int> lst_rm = lstfilm.lst_rmv;
-            Feature.ShowAllFilm(filmImg1, listFilm1, dr, remove:true, rm_list:lst_rm);
+            dr = dtf.Select();
+            //List<int> lst_rm = lstfilm.lst_rmv;
+            Feature.ShowAllFilm(filmImg1, listFilm1, dr,delAll:true);
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -378,6 +382,11 @@ namespace Cinema.func
             cinemaTextbox.Text = cinemaName;
             filmName = nameTextbox.Text + ShowTimeComboBox1.Text;
             CreateCinemaView(cinemaName, filmName);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Filter();
         }
     }
 }

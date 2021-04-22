@@ -24,9 +24,9 @@ namespace Cinema.func
         public static string LoadFilm(ImageList filmImg1, ListView listFilm1, string nameFile)
         {
             string nameFilm;
-            filmImg1.Images.Add(Image.FromFile(nameFile));
             nameFilm = getMatch(nameFile);
             listFilm1.Items.Add(nameFilm, listFilm1.Items.Count);
+            filmImg1.Images.Add(Image.FromFile(nameFile));
             return nameFilm;
         }
 
@@ -123,17 +123,18 @@ namespace Cinema.func
                 return;
             }
         }
-        public static void ShowAllFilm(ImageList imglst, ListView lstview1, DataRow[] dr, bool delAll = false, bool add = true, bool remove = false, List<int> rm_list= null)
+        public static void ShowAllFilm(ImageList imglst, ListView lstview1, DataRow[] drs, bool delAll = false, bool add = true, bool remove = false, List<int> rm_list= null)
         {
             if (delAll)
             {
                 lstview1.Items.Clear();
+                imglst.Images.Clear();
             }
             if (add)
             {
-                for (int i = 0; i < dr.Length; i++)
+                for (int i = 0; i < drs.Length; i++)
                 {
-                    ShowOneFilm(imglst, lstview1, dr[i]);
+                    ShowOneFilm(imglst, lstview1, drs[i]);
                 }
             }
             if (remove)
@@ -221,6 +222,7 @@ namespace Cinema.func
             {
                 //ListViewItem item = lstview.Items[i];
                 lstview.Items[i].Remove();
+                //imglst.Images[i].;
             }
                     
         }
@@ -280,5 +282,7 @@ namespace Cinema.func
             DataRow[] dr = dt.Select(s);
             return dr;
         }
+
+
     }
 }

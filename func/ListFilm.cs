@@ -93,6 +93,13 @@ namespace Cinema.func
 
         private void statusCombobox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            /*string status = statusCombobox1.Text;
+            DataRow[] drs = Feature.getDataRow("Status", status, dt);
+            Feature.ShowAllFilm(imageFilmList1, listFilm1, drs, delAll: true);*/
+        }
+
+        private void buttonFilter2_Click(object sender, EventArgs e)
+        {
             string status = statusCombobox1.Text;
             DataRow[] drs = Feature.getDataRow("Status", status, dt);
             Feature.ShowAllFilm(imageFilmList1, listFilm1, drs, delAll: true);

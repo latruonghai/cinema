@@ -104,6 +104,12 @@ namespace Cinema.func
             DataRow[] dr = dt.Select(s);
             return dr;
         }*/
+        private void Filter()
+        {
+            string status = comboBox1.Text;
+            DataRow[] drs = Feature.getDataRow("Status", status, dtf);
+            Feature.ShowAllFilm(filmImg1, listFilm1, drs, delAll: true);
+        }
         void editInformation(DataRow[] dr)
         {
             dr[0]["ID"] = idTextBox.Text;
