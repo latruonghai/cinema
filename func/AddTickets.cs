@@ -367,7 +367,7 @@ namespace Cinema.func
         private void buttonList2_Click(object sender, EventArgs e)
         {
             TimeFilm tf = new TimeFilm(dt);
-            tf.Show();
+            tf.ShowDialog();
         }
     }
 }
